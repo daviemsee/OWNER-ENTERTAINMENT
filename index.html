@@ -21,6 +21,9 @@
             text-align: center;
             padding: 10px 0;
             background-color: #1e1e1e;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
         }
         nav a.button {
             margin: 5px;
@@ -29,6 +32,8 @@
             color: white;
             text-decoration: none;
             border-radius: 5px;
+            flex: 1 0 120px;
+            max-width: 200px;
         }
         section {
             padding: 20px;
@@ -80,13 +85,29 @@
             max-width: 400px;
             text-align: center;
         }
-        .popup-content button {
+        .popup-content button, .popup-content a.button {
             margin-top: 10px;
+            background-color: #ff6600;
+            color: white;
+            padding: 8px 12px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
         }
         footer {
             text-align: center;
             padding: 15px;
             background-color: #222;
+        }
+        @media screen and (max-width: 600px) {
+            .grid {
+                grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+            }
+            nav a.button {
+                padding: 8px 10px;
+            }
         }
     </style>
 </head>
@@ -108,69 +129,69 @@
     <h2>Accessories</h2>
     <div class="grid">
         <div class="card">
-            <img src="https://orifon.co.ke/wp-content/uploads/2024/12/IMG-20220826-WA0004-1.jpg" alt="Oraimo Charger">
+            <img src="https://via.placeholder.com/150" alt="Oraimo Charger">
             <h3>Oraimo Charger</h3>
-            <button onclick="window.open('https://wa.me/254718989673?text=I want to order Oraimo Charger')">Order Now</button>
+            <button>Order Now</button>
         </div>
         <div class="card">
-            <img src="https://ke.jumia.is/unsafe/fit-in/680x680/filters:fill(white)/product/31/2282392/1.jpg?7795" alt="Oraimo Deeper Bass">
+            <img src="https://via.placeholder.com/150" alt="Oraimo Deeper Bass">
             <h3>Oraimo Deeper Bass</h3>
-            <button onclick="window.open('https://wa.me/254718989673?text=I want to order Oraimo Deeper Bass')">Order Now</button>
+            <button>Order Now</button>
         </div>
         <div class="card">
-            <img src="https://ke.jumia.is/unsafe/fit-in/680x680/filters:fill(white)/product/29/2136002/1.jpg?7777" alt="Oraimo Power Bank 20000mAh">
-            <h3>Oraimo Power Bank 20000mAh</h3>
-            <button onclick="window.open('https://wa.me/254718989673?text=I want to order Oraimo Power Bank 20000mAh')">Order Now</button>
-        </div>
-        <div class="card">
-            <img src="https://files.miniso.co.ke/main/2024/07/oeb-e105d-7_2572_8491.webp" alt="Oraimo Freepods 4 ANC">
-            <h3>Oraimo Freepods 4 ANC</h3>
-            <button onclick="window.open('https://wa.me/254718989673?text=I want to order Oraimo Freepods 4 ANC')">Order Now</button>
-        </div>
-        <div class="card">
-            <img src="https://pandaphones.com/uploads/images/202412/img_1920x_67595c211b5f65-01297743-51510683.jpg" alt="Oraimo Watch 2 Pro">
-            <h3>Oraimo Watch 2 Pro</h3>
-            <button onclick="window.open('https://wa.me/254718989673?text=I want to order Oraimo Watch 2 Pro')">Order Now</button>
-        </div>
-        <div class="card">
-            <img src="https://orifon.co.ke/wp-content/uploads/2025/01/opc-tr12-7.webp" alt="Oraimo Smart Trimmer">
-            <h3>Oraimo Smart Trimmer</h3>
-            <button onclick="window.open('https://wa.me/254718989673?text=I want to order Oraimo Smart Trimmer')">Order Now</button>
-        </div>
-        <div class="card">
-            <img src="https://ke.jumia.is/unsafe/fit-in/680x680/filters:fill(white)/product/94/5442052/1.jpg?6903" alt="Punex Neckband 48hrs">
-            <h3>Punex Neckband 48hrs</h3>
-            <button onclick="window.open('https://wa.me/254718989673?text=I want to order Punex Neckband 48hrs')">Order Now</button>
-        </div>
-        <div class="card">
-            <img src="https://ernest.pythonanywhere.com/media/images/punex-jy-308-charger-removebg-preview.png" alt="Punex Charger">
-            <h3>Punex Charger</h3>
-            <button onclick="window.open('https://wa.me/254718989673?text=I want to order Punex Charger')">Order Now</button>
-        </div>
-        <div class="card">
-            <img src="https://ernest.pythonanywhere.com/media/images/punex-usb-cable-removebg-preview.png" alt="Punex Cable">
-            <h3>Punex Cable</h3>
-            <button onclick="window.open('https://wa.me/254718989673?text=I want to order Punex Cable')">Order Now</button>
-        </div>
-        <div class="card">
-            <img src="https://ke.jumia.is/unsafe/fit-in/680x680/filters:fill(white)/product/98/3500223/1.jpg?2366" alt="TV Guard">
-            <h3>TV Guard</h3>
-            <button onclick="window.open('https://wa.me/254718989673?text=I want to order TV Guard')">Order Now</button>
-        </div>
-        <div class="card">
-            <img src="https://overtech.co.ke/wp-content/uploads/2024/07/Jsb-6-way.jpg" alt="Extension Cable">
-            <h3>Extension Cable</h3>
-            <button onclick="window.open('https://wa.me/254718989673?text=I want to order Extension Cable')">Order Now</button>
-        </div>
-        <div class="card">
-            <img src="https://5.imimg.com/data5/CA/KZ/ZJ/SELLER-16409930/2-0-card-reader-1000x1000.jpg" alt="Card Reader">
-            <h3>Card Reader</h3>
-            <button onclick="window.open('https://wa.me/254718989673?text=I want to order Card Reader')">Order Now</button>
-        </div>
-        <div class="card">
-            <img src="https://www.saruk.co.ke/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fdm0idgzwi%2Fimage%2Fupload%2Fv1707944373%2Fuxguswnnivg25p2yvdsn.jpg&w=640&q=75" alt="Advance 32GB Flashdisk">
+            <img src="https://via.placeholder.com/150" alt="Advance 32GB Flashdisk">
             <h3>Advance 32GB Flashdisk</h3>
-            <button onclick="window.open('https://wa.me/254718989673?text=I want to order Advance 32GB Flashdisk')">Order Now</button>
+            <button>Order Now</button>
+        </div>
+        <div class="card">
+            <img src="https://via.placeholder.com/150" alt="Punex Neckband 48hrs">
+            <h3>Punex Neckband 48hrs</h3>
+            <button>Order Now</button>
+        </div>
+        <div class="card">
+            <img src="https://via.placeholder.com/150" alt="Oraimo Power Bank 20000mAh">
+            <h3>Oraimo Power Bank 20000mAh</h3>
+            <button>Order Now</button>
+        </div>
+        <div class="card">
+            <img src="https://via.placeholder.com/150" alt="Oraimo Freepods 4 ANC">
+            <h3>Oraimo Freepods 4 ANC</h3>
+            <button>Order Now</button>
+        </div>
+        <div class="card">
+            <img src="https://via.placeholder.com/150" alt="Oraimo Watch 2 Pro">
+            <h3>Oraimo Watch 2 Pro</h3>
+            <button>Order Now</button>
+        </div>
+        <div class="card">
+            <img src="https://via.placeholder.com/150" alt="Oraimo Smart Trimmer">
+            <h3>Oraimo Smart Trimmer</h3>
+            <button>Order Now</button>
+        </div>
+        <div class="card">
+            <img src="https://via.placeholder.com/150" alt="Extension Cable">
+            <h3>Extension Cable</h3>
+            <button>Order Now</button>
+        </div>
+        <div class="card">
+            <img src="https://via.placeholder.com/150" alt="Card Reader">
+            <h3>Card Reader</h3>
+            <button>Order Now</button>
+        </div>
+        <div class="card">
+            <img src="https://via.placeholder.com/150" alt="Punex Charger">
+            <h3>Punex Charger</h3>
+            <button>Order Now</button>
+        </div>
+        <div class="card">
+            <img src="https://via.placeholder.com/150" alt="Punex Cable">
+            <h3>Punex Cable</h3>
+            <button>Order Now</button>
+        </div>
+        <div class="card">
+            <img src="https://via.placeholder.com/150" alt="TV Guard">
+            <h3>TV Guard</h3>
+            <button>Order Now</button>
         </div>
     </div>
 </section>
@@ -178,26 +199,15 @@
 <section id="movies">
     <h2>Movies & TV Shows</h2>
     <div class="grid">
-        <div class="card" onclick="showPopup('Revival', 'A former criminal seeks redemption...', 'https://www.themoviedb.org/t/p/w600_and_h900_bestv2/5CuMd9uyNlN9BAxnE29B19pFenZ.jpg')">
+        <div class="card" onclick="showPopup('Revival', 'An inspiring drama.', 'https://www.youtube.com/watch?v=dQw4w9WgXcQ')">
             <img src="https://www.themoviedb.org/t/p/w600_and_h900_bestv2/5CuMd9uyNlN9BAxnE29B19pFenZ.jpg" alt="Revival">
             <h3>Revival</h3>
         </div>
-        <div class="card" onclick="showPopup('Fubar', 'A father and daughter discover secrets while working together as CIA operatives.', 'https://www.themoviedb.org/t/p/w600_and_h900_bestv2/5yVJ1lgR4NJbBzJdSMyfUu8O4Dv.jpg')">
-            <img src="https://www.themoviedb.org/t/p/w600_and_h900_bestv2/5yVJ1lgR4NJbBzJdSMyfUu8O4Dv.jpg" alt="Fubar">
+        <div class="card" onclick="showPopup('Fubar', 'Action and comedy meet.', 'https://www.youtube.com/watch?v=dQw4w9WgXcQ')">
+            <img src="https://www.themoviedb.org/t/p/w600_and_h900_bestv2/8QVDXDiOGHRcAD4oM6MXjE0osSj.jpg" alt="Fubar">
             <h3>Fubar</h3>
         </div>
-        <div class="card" onclick="showPopup('Ghosted', 'A romantic action-adventure about a man who gets caught up in espionage.', 'https://www.themoviedb.org/t/p/w600_and_h900_bestv2/zQNSEdrGCJQzKkpHcP4V5LkyySx.jpg')">
-            <img src="https://www.themoviedb.org/t/p/w600_and_h900_bestv2/zQNSEdrGCJQzKkpHcP4V5LkyySx.jpg" alt="Ghosted">
-            <h3>Ghosted</h3>
-        </div>
-        <div class="card" onclick="showPopup('Lift', 'A master thief and his crew attempt a $100 million heist on a plane.', 'https://www.themoviedb.org/t/p/w600_and_h900_bestv2/p7jyFWiLyHPttqYBFAlLToCqaIh.jpg')">
-            <img src="https://www.themoviedb.org/t/p/w600_and_h900_bestv2/p7jyFWiLyHPttqYBFAlLToCqaIh.jpg" alt="Lift">
-            <h3>Lift</h3>
-        </div>
-        <div class="card" onclick="showPopup('Fast X', 'Dom Toretto and his family are targeted by the vengeful son of drug kingpin Hernan Reyes.', 'https://www.themoviedb.org/t/p/w600_and_h900_bestv2/fiVW06jE7z9YnO4trhaMEdclSiC.jpg')">
-            <img src="https://www.themoviedb.org/t/p/w600_and_h900_bestv2/fiVW06jE7z9YnO4trhaMEdclSiC.jpg" alt="Fast X">
-            <h3>Fast X</h3>
-        </div>
+        <!-- Additional movie cards can be added here -->
     </div>
 </section>
 
@@ -205,7 +215,7 @@
     <div class="popup-content">
         <h3 id="popupTitle"></h3>
         <p id="popupDesc"></p>
-        <button id="popupLink" target="_blank">Watch Trailer</button>
+        <a id="popupLink" href="#" target="_blank" class="button">Watch Trailer</a>
         <button onclick="closePopup()">Close</button>
     </div>
 </div>
@@ -218,9 +228,7 @@
     function showPopup(title, desc, link) {
         document.getElementById('popupTitle').innerText = title;
         document.getElementById('popupDesc').innerText = desc;
-        document.getElementById('popupLink').onclick = function() {
-            window.open(link, '_blank');
-        };
+        document.getElementById('popupLink').href = link;
         document.getElementById('moviePopup').style.display = 'flex';
     }
     function closePopup() {
