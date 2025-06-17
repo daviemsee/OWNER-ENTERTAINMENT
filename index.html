@@ -7,60 +7,58 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            color: #333;
+            background-color: #121212;
+            color: #fff;
             margin: 0;
             padding: 0;
         }
         header {
             background-color: #ff6600;
-            color: white;
             text-align: center;
             padding: 20px 0;
         }
         nav {
             text-align: center;
-            padding: 15px 0;
+            padding: 10px 0;
+            background-color: #1e1e1e;
         }
         nav a {
-            margin: 0 10px;
+            margin: 0 15px;
             text-decoration: none;
             color: #ff6600;
             font-weight: bold;
         }
+        .button {
+            display: inline-block;
+            margin: 10px;
+            padding: 10px 20px;
+            background-color: #ff6600;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
         section {
             padding: 20px;
         }
-        .segment {
-            background: #fff;
-            padding: 15px;
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+        .card {
+            background-color: #1e1e1e;
             border-radius: 8px;
-            margin-bottom: 20px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            padding: 10px;
+            text-align: center;
+            box-shadow: 0 0 10px rgba(0,0,0,0.5);
+            transition: transform 0.2s;
         }
-        h2, h3 {
-            color: #ff6600;
+        .card:hover {
+            transform: scale(1.05);
         }
-        ul {
-            list-style: none;
-            padding: 0;
-        }
-        li {
-            margin-bottom: 20px;
-        }
-        img {
-            width: 150px;
-            height: auto;
-            display: block;
-            margin-bottom: 5px;
-        }
-        a.trailer-link {
-            color: #0066cc;
-            text-decoration: none;
-            font-style: italic;
-        }
-        a.trailer-link:hover {
-            text-decoration: underline;
+        .card img {
+            width: 100%;
+            border-radius: 5px;
         }
         footer {
             text-align: center;
@@ -73,18 +71,20 @@
 <body>
 
 <header>
-    <h1>Welcome to Owner Entertainment</h1>
-    <p>Your Hub for Movies & Accessories</p>
+    <h1>Owner Entertainment</h1>
+    <p>Your Hub for Movies, TV Shows & Accessories</p>
 </header>
 
 <nav>
     <a href="#accessories">Accessories</a>
-    <a href="#movies">Movies</a>
+    <a href="#movies">Movies & TV Shows</a>
+    <a class="button" href="https://www.mediafire.com/file/stdanh4oeo2bp57/OWNER_ENTERTAINMENT_1_1.0.apk/file" target="_blank">Download Our APK</a>
+    <a class="button" href="https://wa.me/254718989673" target="_blank">Chat on WhatsApp (+254718989673)</a>
+    <a class="button" href="https://wa.me/15069908174" target="_blank">Chat on WhatsApp (+15069908174)</a>
 </nav>
 
-<section id="accessories" class="segment">
+<section id="accessories">
     <h2>Accessories</h2>
-    <p>Find the best entertainment gadgets, headphones, VR sets, and more.</p>
     <ul>
         <li>Wireless Headphones</li>
         <li>Bluetooth Speakers</li>
@@ -93,31 +93,35 @@
     </ul>
 </section>
 
-<section id="movies" class="segment">
-    <h2>Movies</h2>
-    <h3>TV Shows</h3>
-    <ul>
-        <li>
-            <img src="https://www.themoviedb.org/t/p/w600_and_h900_bestv2/5CuMd9uyNlN9BAxnE29B19pFenZ.jpg" alt="Revival Poster">
-            Revival — <a class="trailer-link" href="https://www.youtube.com/watch?v=jFLDY_2Tvx0" target="_blank">Watch Trailer</a>
-        </li>
-        <li>
-            <img src="https://www.themoviedb.org/t/p/w600_and_h900_bestv2/fSa1OPyE95Zgu1lufOBIpqv8U2K.jpg" alt="FUBAR Poster">
-            FUBAR Season 2 — <a class="trailer-link" href="https://www.youtube.com/watch?v=vJlfAp7ZCAY" target="_blank">Watch Trailer</a>
-        </li>
-        <li>
-            <img src="https://www.themoviedb.org/t/p/w600_and_h900_bestv2/gFwVf37D3SzpxjM4SJ1YG3y3yw6.jpg" alt="BMF Poster">
-            BMF Season 4 — <a class="trailer-link" href="https://www.youtube.com/watch?v=O8e0TWIJ74Y" target="_blank">Watch Trailer</a>
-        </li>
-        <li>
-            <img src="https://www.themoviedb.org/t/p/w600_and_h900_bestv2/vOwunzW4dx3n0J5mH40n9jTRSwY.jpg" alt="Ginny and Georgia Poster">
-            Ginny and Georgia Season 3 — <a class="trailer-link" href="https://www.youtube.com/results?search_query=ginny+and+georgia+season+3" target="_blank">Watch Trailer</a>
-        </li>
-        <li>
-            <img src="https://www.themoviedb.org/t/p/w600_and_h900_bestv2/wq3vuQzQgbS83zX3malAFWMsSwX.jpg" alt="Walking Dead: Dead City Poster">
-            Walking Dead: Dead City Season 2 — <a class="trailer-link" href="https://www.youtube.com/watch?v=T2q0oV5Nol0" target="_blank">Watch Trailer</a>
-        </li>
-    </ul>
+<section id="movies">
+    <h2>Movies & TV Shows</h2>
+    <div class="grid">
+        <div class="card">
+            <img src="https://www.themoviedb.org/t/p/w600_and_h900_bestv2/5CuMd9uyNlN9BAxnE29B19pFenZ.jpg" alt="Revival">
+            <h3>Revival</h3>
+            <a class="button" href="https://www.youtube.com/watch?v=jFLDY_2Tvx0" target="_blank">Watch Trailer</a>
+        </div>
+        <div class="card">
+            <img src="https://www.themoviedb.org/t/p/w600_and_h900_bestv2/fSa1OPyE95Zgu1lufOBIpqv8U2K.jpg" alt="FUBAR">
+            <h3>FUBAR Season 2</h3>
+            <a class="button" href="https://www.youtube.com/watch?v=vJlfAp7ZCAY" target="_blank">Watch Trailer</a>
+        </div>
+        <div class="card">
+            <img src="https://www.themoviedb.org/t/p/w600_and_h900_bestv2/gFwVf37D3SzpxjM4SJ1YG3y3yw6.jpg" alt="BMF">
+            <h3>BMF Season 4</h3>
+            <a class="button" href="https://www.youtube.com/watch?v=O8e0TWIJ74Y" target="_blank">Watch Trailer</a>
+        </div>
+        <div class="card">
+            <img src="https://www.themoviedb.org/t/p/w600_and_h900_bestv2/vOwunzW4dx3n0J5mH40n9jTRSwY.jpg" alt="Ginny and Georgia">
+            <h3>Ginny and Georgia Season 3</h3>
+            <a class="button" href="https://www.youtube.com/results?search_query=ginny+and+georgia+season+3" target="_blank">Watch Trailer</a>
+        </div>
+        <div class="card">
+            <img src="https://www.themoviedb.org/t/p/w600_and_h900_bestv2/wq3vuQzQgbS83zX3malAFWMsSwX.jpg" alt="Walking Dead">
+            <h3>Walking Dead: Dead City S2</h3>
+            <a class="button" href="https://www.youtube.com/watch?v=T2q0oV5Nol0" target="_blank">Watch Trailer</a>
+        </div>
+    </div>
 </section>
 
 <footer>
