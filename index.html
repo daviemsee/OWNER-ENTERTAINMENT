@@ -22,16 +22,9 @@
             padding: 10px 0;
             background-color: #1e1e1e;
         }
-        nav a {
-            margin: 0 10px;
-            text-decoration: none;
-            color: #ff6600;
-            font-weight: bold;
-        }
-        .button {
-            display: inline-block;
-            margin: 10px 5px;
-            padding: 10px 20px;
+        nav a.button {
+            margin: 5px;
+            padding: 10px 15px;
             background-color: #ff6600;
             color: white;
             text-decoration: none;
@@ -42,8 +35,8 @@
         }
         .grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 20px;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 15px;
         }
         .card {
             background-color: #1e1e1e;
@@ -60,11 +53,40 @@
             width: 100%;
             border-radius: 5px;
         }
+        .card h3 {
+            margin: 10px 0 5px 0;
+        }
+        .card button {
+            background-color: #ff6600;
+            color: white;
+            border: none;
+            padding: 8px 12px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .popup {
+            display: none;
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background-color: rgba(0,0,0,0.8);
+            justify-content: center;
+            align-items: center;
+        }
+        .popup-content {
+            background-color: #222;
+            padding: 20px;
+            border-radius: 10px;
+            max-width: 400px;
+            text-align: center;
+        }
+        .popup-content button {
+            margin-top: 10px;
+        }
         footer {
             text-align: center;
             padding: 15px;
             background-color: #222;
-            color: white;
         }
     </style>
 </head>
@@ -76,11 +98,10 @@
 </header>
 
 <nav>
-    <a href="#accessories">Accessories</a>
-    <a href="#movies">Movies & TV Shows</a>
-    <a class="button" href="https://www.mediafire.com/file/stdanh4oeo2bp57/OWNER_ENTERTAINMENT_1_1.0.apk/file" target="_blank">Download Our APK</a>
-    <a class="button" href="https://wa.me/254718989673" target="_blank">Chat on WhatsApp (+254718989673)</a>
-    <a class="button" href="https://wa.me/15069908174" target="_blank">Chat on WhatsApp (+15069908174)</a>
+    <a href="#accessories" class="button">Accessories</a>
+    <a href="#movies" class="button">Movies & TV Shows</a>
+    <a href="https://www.mediafire.com/file/stdanh4oeo2bp57/OWNER_ENTERTAINMENT_1_1.0.apk/file" class="button" target="_blank">Download Our APK</a>
+    <a href="https://wa.me/254718989673" class="button" target="_blank">Chat on WhatsApp</a>
 </nav>
 
 <section id="accessories">
@@ -89,18 +110,22 @@
         <div class="card">
             <img src="https://orifon.co.ke/wp-content/uploads/2024/12/IMG-20220826-WA0004-1.jpg" alt="Oraimo Charger">
             <h3>Oraimo Charger</h3>
+            <button onclick="window.open('https://wa.me/254718989673?text=I want to order Oraimo Charger')">Order Now</button>
         </div>
         <div class="card">
             <img src="https://ke.jumia.is/unsafe/fit-in/680x680/filters:fill(white)/product/31/2282392/1.jpg?7795" alt="Oraimo Deeper Bass">
             <h3>Oraimo Deeper Bass</h3>
+            <button onclick="window.open('https://wa.me/254718989673?text=I want to order Oraimo Deeper Bass')">Order Now</button>
         </div>
         <div class="card">
-            <img src="https://www.saruk.co.ke/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fdm0idgzwi%2Fimage%2Fupload%2Fv1707944373%2Fuxguswnnivg25p2yvdsn.jpg&w=640&q=75" alt="Original Advance 32GB Flashdisk">
-            <h3>Original Advance 32GB Flashdisk</h3>
+            <img src="https://www.saruk.co.ke/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fdm0idgzwi%2Fimage%2Fupload%2Fv1707944373%2Fuxguswnnivg25p2yvdsn.jpg&w=640&q=75" alt="Advance 32GB Flashdisk">
+            <h3>Advance 32GB Flashdisk</h3>
+            <button onclick="window.open('https://wa.me/254718989673?text=I want to order Advance 32GB Flashdisk')">Order Now</button>
         </div>
         <div class="card">
-            <img src="https://ke.jumia.is/unsafe/fit-in/680x680/filters:fill(white)/product/94/5442052/1.jpg?6903" alt="Punex Neckband 48Hrs">
-            <h3>Punex Neckband 48Hrs</h3>
+            <img src="https://ke.jumia.is/unsafe/fit-in/680x680/filters:fill(white)/product/94/5442052/1.jpg?6903" alt="Punex Neckband 48hrs">
+            <h3>Punex Neckband 48hrs</h3>
+            <button onclick="window.open('https://wa.me/254718989673?text=I want to order Punex Neckband 48hrs')">Order Now</button>
         </div>
     </div>
 </section>
@@ -108,37 +133,55 @@
 <section id="movies">
     <h2>Movies & TV Shows</h2>
     <div class="grid">
-        <div class="card">
+        <div class="card" onclick="showPopup('Revival', 'A story of hope and survival.', 'https://www.youtube.com/watch?v=jFLDY_2Tvx0')">
             <img src="https://www.themoviedb.org/t/p/w600_and_h900_bestv2/5CuMd9uyNlN9BAxnE29B19pFenZ.jpg" alt="Revival">
             <h3>Revival</h3>
-            <a class="button" href="https://www.youtube.com/watch?v=jFLDY_2Tvx0" target="_blank">Watch Trailer</a>
         </div>
-        <div class="card">
+        <div class="card" onclick="showPopup('FUBAR Season 2', 'Action-packed thriller with unexpected twists.', 'https://www.youtube.com/watch?v=vJlfAp7ZCAY')">
             <img src="https://www.themoviedb.org/t/p/w600_and_h900_bestv2/fSa1OPyE95Zgu1lufOBIpqv8U2K.jpg" alt="FUBAR">
             <h3>FUBAR Season 2</h3>
-            <a class="button" href="https://www.youtube.com/watch?v=vJlfAp7ZCAY" target="_blank">Watch Trailer</a>
         </div>
-        <div class="card">
+        <div class="card" onclick="showPopup('BMF Season 4', 'Drama based on real-life events.', 'https://www.youtube.com/watch?v=O8e0TWIJ74Y')">
             <img src="https://www.themoviedb.org/t/p/w600_and_h900_bestv2/gFwVf37D3SzpxjM4SJ1YG3y3yw6.jpg" alt="BMF">
             <h3>BMF Season 4</h3>
-            <a class="button" href="https://www.youtube.com/watch?v=O8e0TWIJ74Y" target="_blank">Watch Trailer</a>
         </div>
-        <div class="card">
+        <div class="card" onclick="showPopup('Ginny and Georgia Season 3', 'Comedy-drama about family and secrets.', 'https://www.youtube.com/results?search_query=ginny+and+georgia+season+3')">
             <img src="https://www.themoviedb.org/t/p/w600_and_h900_bestv2/vOwunzW4dx3n0J5mH40n9jTRSwY.jpg" alt="Ginny and Georgia">
             <h3>Ginny and Georgia Season 3</h3>
-            <a class="button" href="https://www.youtube.com/results?search_query=ginny+and+georgia+season+3" target="_blank">Watch Trailer</a>
         </div>
-        <div class="card">
+        <div class="card" onclick="showPopup('Walking Dead: Dead City S2', 'Post-apocalyptic horror drama.', 'https://www.youtube.com/watch?v=T2q0oV5Nol0')">
             <img src="https://www.themoviedb.org/t/p/w600_and_h900_bestv2/wq3vuQzQgbS83zX3malAFWMsSwX.jpg" alt="Walking Dead">
             <h3>Walking Dead: Dead City S2</h3>
-            <a class="button" href="https://www.youtube.com/watch?v=T2q0oV5Nol0" target="_blank">Watch Trailer</a>
         </div>
     </div>
 </section>
 
+<div class="popup" id="moviePopup">
+    <div class="popup-content">
+        <h3 id="popupTitle"></h3>
+        <p id="popupDesc"></p>
+        <button id="popupLink" target="_blank">Watch Trailer</button>
+        <button onclick="closePopup()">Close</button>
+    </div>
+</div>
+
 <footer>
     &copy; 2025 Owner Entertainment. All rights reserved.
 </footer>
+
+<script>
+    function showPopup(title, desc, link) {
+        document.getElementById('popupTitle').innerText = title;
+        document.getElementById('popupDesc').innerText = desc;
+        document.getElementById('popupLink').onclick = function() {
+            window.open(link, '_blank');
+        };
+        document.getElementById('moviePopup').style.display = 'flex';
+    }
+    function closePopup() {
+        document.getElementById('moviePopup').style.display = 'none';
+    }
+</script>
 
 </body>
 </html>
